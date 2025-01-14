@@ -1,5 +1,11 @@
 import { register } from 'yimi-webrtc-phone';
 import { useRef, useEffect } from 'react';
+import debug from 'debug';
+import './App.css';
+
+console.log = debug('app:log');
+debug.enable('app:log');
+
 const App = () => {
   // dom 节点的 ref
   const phoneRef = useRef(null);
@@ -55,14 +61,13 @@ const App = () => {
       // 初始化配置项
       try {
         phoneRef.current.initConfig({
-          server: 'https://emicall-cmb.emicloud.com',
-          officeNumber: '02566687523',
-          number: '6666',
-          password: '!QAZ2wsx',
+          server: process.env.APP_SERVER,
+          officeNumber: process.env.APP_OFFICE_NUMBER,
+          number: process.env.APP_NUMBER,
+          password: process.env.APP_PASSWORD,
           type: '2',
           phone: '',
-          autoLogin: true,
-          preStatus: '2',
+          autoLogin: true
         });
         configed.current = true;
       } catch (error) {
@@ -72,7 +77,7 @@ const App = () => {
   }, [phoneRef.current]);
   return (
     <div className="content">
-      <yimi-webrtc-phone ref={phoneRef}></yimi-webrtc-phone>
+      <yimi-webrtc-phone ref={phoneRef} size="large"></yimi-webrtc-phone>
     </div>
   );
 };

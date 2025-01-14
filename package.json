@@ -10,9 +10,11 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
+    "debug": "^4.4.0",
+    "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "yimi-webrtc-phone": "^1.0.3"
+    "yimi-webrtc-phone": "^1.0.6"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.0",
