@@ -5,6 +5,7 @@ import './App.css';
 
 console.log = debug('app:log');
 debug.enable('app:log');
+debug.enable('yimi-webrtc-phone');
 
 const App = () => {
   // dom 节点的 ref
@@ -78,6 +79,11 @@ const App = () => {
   return (
     <div className="content">
       <yimi-webrtc-phone ref={phoneRef} size="large"></yimi-webrtc-phone>
+
+      <p className="tips">
+        <span><a href="https://www.npmjs.com/package/yimi-webrtc-phone" target="_blank">UI 通话条的文档及 npm 库</a></span>
+        <span>纯 API 的 <a href="https://www.npmjs.com/package/jssip-emicnet" target="_blank">&nbsp;npm 库</a>，<a href="https://www.yuque.com/yimi/phonebar/intro" target="_blank">文档</a></span>
+      </p>
     </div>
   );
 };
