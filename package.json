@@ -7,7 +7,9 @@
     "dev": "rsbuild dev --open",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "preview": "rsbuild preview"
+    "preview": "rsbuild preview",
+    "phonebar": "http-server -p 9000 ./dist",
+    "pretoolbar": "rsbuild build --mode=production"
   },
   "dependencies": {
     "debug": "^4.4.0",
@@ -25,6 +27,7 @@
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^5.0.0",
     "globals": "^15.11.0",
+    "http-server": "^14.1.1",
     "prettier": "^3.3.3"
   }
 }

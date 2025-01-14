@@ -1,0 +1,10 @@
+version: "2.1"
+
+services:
+  phonebar:
+    image: phonebar:2.0.0
+    ports:
+      - 9000:9000
+    build:
+      context: .
+      dockerfile: Dockerfile
