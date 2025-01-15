@@ -20,6 +20,8 @@ const App = () => {
       // 注册为 Web Component
       register();
       initialized.current = true;
+
+      document.title = "Yimi WebRTC Phone";
     }
     return () => {};
   }, []);
