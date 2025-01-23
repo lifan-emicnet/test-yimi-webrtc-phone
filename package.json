@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "rsbuild build && rsbuild preview",
     "phonebar": "http-server -p 9000 ./dist",
-    "pretoolbar": "rsbuild build --mode=production"
+    "prephonebar": "rsbuild build --mode=production"
   },
   "dependencies": {
     "@ant-design/icons": "^5.5.2",

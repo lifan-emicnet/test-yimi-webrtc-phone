@@ -6,6 +6,6 @@ WORKDIR /app
 COPY package.json /app
 RUN npm install --registry=https://registry.npmmirror.com
 COPY . /app
-RUN npm run pretoolbar
+RUN npm run prephonebar
 EXPOSE 9000
 CMD ["npm", "run", "phonebar"]
