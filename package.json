@@ -7,7 +7,7 @@
     "dev": "rsbuild dev --open",
     "format": "prettier --write .",
     "lint": "eslint .",
-    "preview": "rsbuild preview",
+    "preview": "rsbuild build && rsbuild preview",
     "phonebar": "http-server -p 9000 ./dist",
     "pretoolbar": "rsbuild build --mode=production"
   },
