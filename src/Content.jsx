@@ -27,6 +27,10 @@ const App = () => {
         <h2>主要功能</h2>
         <ul>
           <li>
+            <strong>支持多种设备</strong>
+            ：支持在现代浏览器中直接使用，支持回拨到手机上，支持绑定到传统座机。
+          </li>
+          <li>
             <strong>坐席状态管理</strong>
             ：支持空闲、忙碌、通话中、话后处理等多种状态。
           </li>
@@ -53,10 +57,10 @@ const App = () => {
 
       <section>
         <h2>快速集成示例</h2>
-        <div class="code-box">
+        <div className="code-box">
           <code>npm i yimi-webrtc-phone</code>
         </div>
-        <div class="code-box">
+        <div className="code-box">
           <code>
             &lt;yimi-webrtc-phone id="phone"&gt;&lt;/yimi-webrtc-phone&gt;
             <br />
@@ -64,7 +68,10 @@ const App = () => {
             <br />
             &nbsp;&nbsp;const phoneBar = document.getElementById("phone");
             <br />
-            &nbsp;&nbsp;phoneBar.handleCall("10010");
+            &nbsp;&nbsp;phoneBar.initConfig(&#123; &#46;&#46;&#46; &#125;); //
+            初始化配置
+            <br />
+            &nbsp;&nbsp;phoneBar.handleCall("10010"); // 调用接口拨打电话
             <br />
             &lt;/script&gt;
           </code>

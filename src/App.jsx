@@ -147,16 +147,16 @@ const App = () => {
         colors={JSON.stringify(colors.current)}
       >
         <span slot="login">
-          <Popover content="login">
+          <Popover content="Login">
             <Button size="large" color="#4096ff" shape="square" type="primary">
-              login
+              Login
             </Button>
           </Popover>
         </span>
         <span slot="logout">
-          <Popover content="logout">
+          <Popover content="Logout">
             <Button size="large" color="#4096ff" shape="square" type="primary">
-              logout
+              Logout
             </Button>
           </Popover>
         </span>
