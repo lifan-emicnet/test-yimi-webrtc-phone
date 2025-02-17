@@ -174,15 +174,15 @@ const App = () => {
             </Button>
           </Popover>
         </span>
-        <span slot="mute">
-          <Popover content="Mute the call">
+        <span slot="cancel-mute">
+          <Popover content="Unmute the call">
             <Button size="large" shape="square">
               <AudioMutedOutlined style={{ color: colors.current.ringing }} />
             </Button>
           </Popover>
         </span>
-        <span slot="cancel-mute">
-          <Popover content="Unmute the call">
+        <span slot="mute">
+          <Popover content="Mute the call">
             <Button size="large" shape="square">
               <AudioOutlined style={{ color: colors.current.ringing }} />
             </Button>
