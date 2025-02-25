@@ -1,7 +1,7 @@
 import { register } from 'yimi-webrtc-phone';
 // import { register } from '../../yimi-webrtc-phone/dist/yimi-webrtc-phone.es';
 import { useRef, useEffect, useState } from 'react';
-import { Button, Select, Form, Input, Popover } from 'antd';
+import { Button, Select, Form, Input, Popover, Switch } from 'antd';
 import {
   CloseOutlined,
   PhoneOutlined,
@@ -32,6 +32,7 @@ const App = () => {
     after_call: '#ff7a45',
   });
   const [isVoip, setIsVoip] = useState(true);
+  const autuAnswer = useRef(false);
 
   const handleChange = (value) => {
     console.log(`selected ${value}`);
@@ -48,18 +49,18 @@ const App = () => {
   };
 
   const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
+    console.log('onFinishFailed:', errorInfo);
   };
 
   const onFormFinish = (values) => {
-    console.log('Success:', values);
+    console.log('onFormFinish:', values);
     if (phoneRef.current) {
       phoneRef.current.initConfig(values);
     }
   };
 
   const onFormFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
+    console.log('onFormFinishFailed:', errorInfo);
   };
 
   const handleCall = () => {
@@ -82,6 +83,11 @@ const App = () => {
       setIsVoip(changedValues.type === 2);
       console.log('isVoip:', isVoip);
     }
+  };
+
+  const onChange = (checked) => {
+    console.log(`switch to ${checked}`);
+    autuAnswer.current = checked;
   };
 
   useEffect(() => {
@@ -111,6 +117,9 @@ const App = () => {
             break;
           case 'newPBXCall':
             console.log('newPBXCall', data);
+            if (autuAnswer.current) {
+              phoneRef.current.handleAnswer();
+            }
             break;
           case 'cancelPBXCall':
             console.log('cancelPBXCall', data);
@@ -411,6 +420,17 @@ const App = () => {
           </div>
         </Form>
       </yimi-webrtc-phone>
+
+      <Popover content="Auto Answer Config">
+        <Switch
+          size="default"
+          checkedChildren="Auto Answer is ON"
+          unCheckedChildren="Auto Answer is OFF"
+          onChange={onChange}
+        >
+          Auto Answer
+        </Switch>
+      </Popover>
     </div>
   );
 };

@@ -97,6 +97,7 @@ footer a:hover {
   line-height: 1.1;
   text-align: center;
   padding: 1rem;
+  gap: 1rem;
 }
 
 .phone-form {
