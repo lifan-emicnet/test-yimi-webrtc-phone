@@ -288,6 +288,8 @@ const App = () => {
           }}
           style={{
             width: '450px',
+            position:'relative',
+            zIndex: 1000,
           }}
           initialValues={{
             server: process.env.APP_SERVER,
