@@ -1,5 +1,5 @@
 # FROM registry.cn-beijing.aliyuncs.com/web-cm/node:18
-FROM node:18-alpine3.18
+FROM node:18-alpine
 # FROM registry.cn-hangzhou.aliyuncs.com/library/node:18-alpine3.18
 RUN mkdir /app
 WORKDIR /app
