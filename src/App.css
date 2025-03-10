@@ -44,7 +44,7 @@ header p {
 }
 section {
   padding: 20px;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 20px auto;
   background: white;
   border-radius: 8px;
