@@ -20,13 +20,6 @@ const App = () => {
       </section>
       <section>
         <h2>产品演示</h2>
-        <p style={{ textAlign: 'center' }}>
-          该组件的 UI 使用{' '}
-          <a href="https://ant.design/docs/spec/introduce" target="_blank">
-            Ant Design 组件库
-          </a>{' '}
-          进行自定义
-        </p>
         <Phone />
       </section>
 
