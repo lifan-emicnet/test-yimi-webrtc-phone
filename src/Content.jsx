@@ -35,10 +35,13 @@ const App = () => {
             ：支持空闲、忙碌、通话中、话后处理等多种状态。
           </li>
           <li>
-            <strong>通话操作</strong>：提供拨打、接听、挂断、静音等基础操作。
+            <strong>通话基础操作</strong>：提供拨打、接听、挂断、静音等基础操作。
           </li>
           <li>
-            <strong>高度自定义</strong>：可自定义主题、尺寸及按钮 UI。
+            <strong>通话高级操作</strong>：提供转接、咨询、三方等基础操作。
+          </li>
+          <li>
+            <strong>高度自定义</strong>：可自定义颜色主题。
           </li>
           <li>
             <strong>事件系统</strong>
