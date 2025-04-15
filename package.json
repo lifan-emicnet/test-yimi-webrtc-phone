@@ -17,7 +17,7 @@
     "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "yimi-webrtc-phone": "^1.1.26"
+    "yimi-webrtc-phone": "^1.1.27"
   },
   "devDependencies": {
     "@eslint/compat": "^1.2.0",
